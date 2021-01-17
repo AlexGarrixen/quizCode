@@ -1,0 +1,10 @@
+.root {
+  padding: 0.6rem 0.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--color-gray-100);
+  font-size: var(--fontSize-base);
+}
+
+.fullWidth {
+  width: 100%;
+}

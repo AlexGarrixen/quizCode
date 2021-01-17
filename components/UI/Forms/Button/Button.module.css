@@ -1,0 +1,22 @@
+.root {
+  background-color: #fff;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 12px;
+  font-weight: 600;
+  color: var(--color-gray-200);
+  font-size: var(--fontSize-base);
+}
+
+.text {
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+}
+
+.primary {
+  background-color: var(--color-primary);
+  color: #fff;
+}

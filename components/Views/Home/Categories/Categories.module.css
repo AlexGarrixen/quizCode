@@ -1,0 +1,30 @@
+.root {
+  margin-top: 2rem;
+}
+
+.icon {
+  position: absolute;
+}
+
+.title {
+  margin-bottom: 1rem;
+  font-size: var(--fontSize-lg);
+  color: var(--color-gray-200);
+}
+
+.categoriesGrid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 600px) {
+  .categoriesGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1280px) {
+  .categoriesGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

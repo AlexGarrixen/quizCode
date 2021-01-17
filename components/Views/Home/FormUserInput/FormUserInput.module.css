@@ -1,0 +1,20 @@
+.root {
+  padding: 1rem;
+}
+
+.label {
+  color: var(--color-gray-200);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.actionsBox {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.actionsBox button:first-child {
+  margin-right: 1rem;
+}

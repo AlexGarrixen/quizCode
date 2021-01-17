@@ -1,0 +1,26 @@
+.contentBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.image {
+  height: 50px;
+}
+
+.linksBox {
+  display: flex;
+}
+
+.linksBox li:not(:last-child) {
+  margin-right: 0.875rem;
+}
+
+.link {
+  color: var(--color-gray-200);
+  font-weight: 600;
+}
+
+.activeLink {
+  color: var(--color-primary);
+}
