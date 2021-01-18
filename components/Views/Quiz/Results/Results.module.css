@@ -1,0 +1,35 @@
+.root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  font-size: var(--fontSize-2xl);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.scoreBox {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  margin: 0 auto;
+}
+
+.totalScore {
+  font-size: var(--fontSize-3xl);
+  margin-bottom: 0.25rem;
+}
+
+.btnBox {
+  text-align: center;
+  margin-top: 2rem;
+}

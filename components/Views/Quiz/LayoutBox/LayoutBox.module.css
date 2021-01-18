@@ -1,0 +1,11 @@
+.root {
+  display: grid;
+  height: calc(100vh - 50px);
+  overflow: hidden;
+}
+
+@media (min-width: 960px) {
+  .root {
+    grid-template-columns: 600px 1fr;
+  }
+}
