@@ -1,0 +1,14 @@
+.root {
+  padding-top: 3rem;
+  background-image: linear-gradient(210deg, #6ee2f5, #6454f0);
+  min-height: calc(100vh - 50px);
+}
+
+.title {
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.contentBox li:not(:last-child) {
+  margin-bottom: 0.75rem;
+}

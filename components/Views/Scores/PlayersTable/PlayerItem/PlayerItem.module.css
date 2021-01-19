@@ -1,0 +1,33 @@
+.root {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.35);
+  padding: 0.75rem;
+  border-radius: 6px;
+}
+
+.player {
+  font-size: var(--fontSize-base);
+  color: #fff;
+}
+
+.category {
+  font-size: var(--fontSize-sm);
+  color: #fff;
+  margin-top: 0.25rem;
+}
+
+.score {
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+}
+
+.score svg {
+  margin-right: 0.75rem;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
