@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useRouter } from 'next/router';
 import { usePlayer } from '@contexts/App';
-import { useSelectedCategory } from '../hooks';
+import { useSelectedCategory } from '../../hooks';
 
 export const useFormInput = () => {
   const { categoryId } = useSelectedCategory();

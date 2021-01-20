@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { HomeContext, HomeContextValue } from '../Context';
+import { HomeContext, HomeContextValue } from '../components/Context';
 import useFormVisibility from './useFormVisibility';
 
 const useSelectedCategory = () => {

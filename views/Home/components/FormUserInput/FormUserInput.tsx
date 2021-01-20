@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Dialog, Button, Input } from '@ui-components';
 import { FC } from '@types';
-import { useFormVisibility } from '../hooks';
+import { useFormVisibility } from '../../hooks';
 import { useFormInput } from './hook';
 import styles from './FormUserInput.module.css';
 

@@ -15,9 +15,9 @@
     "jsx": "preserve",
     "baseUrl": "./",
     "paths": {
-      "@ui-components": ["components/UI/index.ts"],
-      "@view-components/*": ["components/Views/*"],
-      "@icons": ["components/UI/Icons/index.ts"],
+      "@ui-components": ["components/index.ts"],
+      "@view-components/*": ["views/*"],
+      "@icons": ["components/Icons/index.ts"],
       "@mocks": ["shared/mocks/index.ts"],
       "@hooks": ["hooks/index.ts"],
       "@interfaces": ["shared/interfaces/index.ts"],
