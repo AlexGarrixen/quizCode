@@ -18,3 +18,9 @@
 .actionsBox button:first-child {
   margin-right: 1rem;
 }
+
+.helperErrorText {
+  font-size: var(--fontSize-sm);
+  margin-top: 0.5rem;
+  display: block;
+}
