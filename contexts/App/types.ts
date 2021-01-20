@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { Category } from '@interfaces';
 
 export type Categories = Record<string, Category>;

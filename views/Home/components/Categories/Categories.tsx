@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Container } from '@ui-components';
 import { FC } from '@types';
 import { useCategories } from '@contexts/App';
-import { useSelectedCategory } from '../hooks';
+import { useSelectedCategory } from '../../hooks';
 import { Category } from './Category';
 import styles from './Categories.module.css';
 
