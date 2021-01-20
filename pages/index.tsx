@@ -1,11 +1,13 @@
 import * as React from 'react';
-import { Categories, FormUserInput } from '@view-components/Home';
+import { Categories, FormUserInput, Provider } from '@view-components/Home';
 
 const Home = () => (
-  <div>
-    <Categories />
-    <FormUserInput />
-  </div>
+  <Provider>
+    <div>
+      <Categories />
+      <FormUserInput />
+    </div>
+  </Provider>
 );
 
 export default Home;

@@ -1,8 +1,8 @@
 export interface Category {
-  id: string;
+  _id: string;
   name: string;
   topics: string[];
-  bgColor: {
+  bgGradient: {
     from: string;
     to: string;
   };

@@ -1,23 +1,40 @@
 import * as React from 'react';
 import { Container } from '@ui-components';
 import { FC } from '@types';
-import { categories } from '@mocks';
+import { useCategories } from '@contexts/App';
+import { useSelectedCategory } from '../hooks';
 import { Category } from './Category';
 import styles from './Categories.module.css';
 
-const Wrapper: FC = () => (
-  <section className={styles.root}>
-    <Container>
-      <h2 className={styles.title}>SELECCIONA UNA CATEGORIA</h2>
-      <ul className={styles.categoriesGrid}>
-        {categories.map((category) => (
-          <li key={category.id}>
-            <Category {...category} />
-          </li>
-        ))}
-      </ul>
-    </Container>
-  </section>
-);
+const Categories: FC = () => {
+  const { categories, requesting, requestCategories } = useCategories();
+  const { setCategoryId } = useSelectedCategory();
 
-export default Wrapper;
+  React.useEffect(() => {
+    requestCategories();
+  }, []);
+
+  return (
+    <section className={styles.root}>
+      <Container>
+        <h2 className={styles.title}>SELECCIONA UNA CATEGORIA</h2>
+        {requesting ? (
+          <p>Cargando...</p>
+        ) : (
+          <ul className={styles.categoriesGrid}>
+            {Object.values(categories).map((category) => (
+              <li key={category._id}>
+                <Category
+                  {...category}
+                  onSelect={setCategoryId(category._id)}
+                />
+              </li>
+            ))}
+          </ul>
+        )}
+      </Container>
+    </section>
+  );
+};
+
+export default Categories;

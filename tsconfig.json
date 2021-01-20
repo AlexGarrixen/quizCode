@@ -22,7 +22,9 @@
       "@hooks": ["hooks/index.ts"],
       "@interfaces": ["shared/interfaces/index.ts"],
       "@types": ["shared/types/index.ts"],
-      "@utils": ["shared/utils/index.ts"]
+      "@utils": ["shared/utils/index.ts"],
+      "@constants": ["shared/const/index.ts"],
+      "@contexts/*": ["contexts/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
