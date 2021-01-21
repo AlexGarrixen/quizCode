@@ -1,0 +1,42 @@
+.root {
+  padding: 3rem;
+  overflow-y: auto;
+}
+
+.questionIndex {
+  font-size: var(--fontSize-base);
+  color: var(--color-gray-100);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.question {
+  font-size: var(--fontSize-2xl);
+  color: var(--color-gray-200);
+  margin-bottom: 3rem;
+}
+
+.option {
+  background-color: #dddee6;
+  color: var(--color-gray-200);
+  padding: 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.selectedOption {
+  box-shadow: 0 0 0 2px var(--color-primary);
+}
+
+.option:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+
+.actionsBox {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nextButton {
+  margin-top: 2rem;
+}

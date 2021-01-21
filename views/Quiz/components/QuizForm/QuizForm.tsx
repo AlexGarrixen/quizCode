@@ -1,28 +1,23 @@
 import * as React from 'react';
-import clsx from 'clsx';
-import { Button } from '@ui-components';
+import { useRouter } from 'next/router';
+import { Quiz } from './Quiz';
 import { FC } from '@types';
-// import { Results } from '../Results';
-import styles from './QuizForm.module.css';
+import { useQuestions } from '@contexts/App';
 
-const QuizForm: FC = () => (
-  <div className={styles.root}>
-    {/* <Results /> */}
-    <span className={styles.questionIndex}>PREGUNTA 1 / 10</span>
-    <h3 className={styles.question}>NAME OF QUESTION</h3>
-    <ul>
-      <li className={clsx(styles.option, styles.selectedOption)}>
-        Option content
-      </li>
-      <li className={styles.option}>Option content</li>
-      <li className={styles.option}>Option content</li>
-      <li className={styles.option}>Option content</li>
-      <li className={styles.option}>Option content</li>
-    </ul>
-    <div className={styles.actionsBox}>
-      <Button text='Siguiente' color='primary' className={styles.nextButton} />
-    </div>
-  </div>
-);
+const QuizForm: FC = () => {
+  const router = useRouter();
+  const categoryId = router.query.id as string;
+  const { questions, requesting, error, requestQuestions } = useQuestions(
+    categoryId
+  );
+
+  React.useEffect(() => {
+    requestQuestions();
+  }, [router.query]);
+
+  if (error) return <p>Algo salio mal, intentalo mas tarde</p>;
+
+  return requesting ? <p>Cargando...</p> : <Quiz questions={questions} />;
+};
 
 export default QuizForm;
