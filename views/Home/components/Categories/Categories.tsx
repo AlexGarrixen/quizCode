@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Container } from '@ui-components';
+import { Container, Loading } from '@ui-components';
 import { FC } from '@types';
 import { useCategories } from '@contexts/App';
 import { useSelectedCategory } from '../../hooks';
@@ -19,7 +19,7 @@ const Categories: FC = () => {
       <Container>
         <h2 className={styles.title}>SELECCIONA UNA CATEGORIA</h2>
         {requesting ? (
-          <p>Cargando...</p>
+          <Loading color='primary' />
         ) : (
           <ul className={styles.categoriesGrid}>
             {Object.values(categories).map((category) => (

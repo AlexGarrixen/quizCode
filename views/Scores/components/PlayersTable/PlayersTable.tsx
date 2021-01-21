@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useRouter } from 'next/router';
 import { PlayerItem } from './PlayerItem';
-import { Container } from '@ui-components';
+import { Container, Loading } from '@ui-components';
 import { useScores } from '@contexts/App';
 import styles from './PlayersTable.module.css';
 
@@ -20,7 +20,7 @@ const PlayersTable = () => {
       <Container>
         <h2 className={styles.title}>Lista de jugadores</h2>
         {requesting ? (
-          <p>...</p>
+          <Loading />
         ) : (
           <ul className={styles.contentBox}>
             {scores.map((player) => (

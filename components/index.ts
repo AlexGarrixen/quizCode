@@ -5,3 +5,5 @@ export * from './Modals/Dialog';
 
 export * from './Forms/Button';
 export * from './Forms/Input';
+
+export * from './Feedback/Loading';

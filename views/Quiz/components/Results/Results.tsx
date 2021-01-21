@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useRouter } from 'next/router';
-import { Button } from '@ui-components';
+import { Button, Loading } from '@ui-components';
 import { FC } from '@types';
 import { useResults } from './hook';
 import styles from './Results.module.css';
@@ -38,7 +38,10 @@ const Results: FC<ResultsProps> = ({
   if (error) return <p>Algo salio mal, intentalo mas tarde</p>;
 
   return requestingSave ? (
-    <p>Guardando partida ...</p>
+    <div className={styles.loadingBox}>
+      <Loading color='primary' />
+      <p>Guardando partida</p>
+    </div>
   ) : (
     <div className={styles.root}>
       <h3 className={styles.title}>Has Puntuado:</h3>
