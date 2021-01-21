@@ -1,0 +1,36 @@
+.root {
+  width: 70px;
+  text-align: center;
+}
+
+.root div {
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+  border-radius: 100%;
+  display: inline-block;
+  animation: bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.primary div {
+  background-color: var(--color-primary);
+}
+
+.bounceOne {
+  animation-delay: -0.32s !important;
+}
+
+.bounceTwo {
+  animation-delay: -0.16s !important;
+}
+
+@keyframes bouncedelay {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}

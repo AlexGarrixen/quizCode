@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import { FC } from '@types';
 import { generateBgGradient } from '@utils';
 import { useCategory } from '@contexts/App';
+import { Loading } from '@ui-components';
 import styles from './Category.module.css';
 
 const Category: FC = () => {
@@ -22,7 +23,7 @@ const Category: FC = () => {
 
   return loading ? (
     <div className={styles.root}>
-      <p>...</p>
+      <Loading />
     </div>
   ) : (
     <div
