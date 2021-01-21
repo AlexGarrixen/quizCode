@@ -5,12 +5,13 @@ import { apiUrl } from '@constants';
 
 const useScores = () => {
   const { scores, setScores } = React.useContext(AppContext) as ContextValue;
-  const [requesting, setRequesting] = React.useState(true);
+  const requested = scores.length > 0;
+  const [requesting, setRequesting] = React.useState(!requested);
   const [error, setError] = React.useState<null | boolean>(null);
 
   const requestScores = async () => {
     try {
-      if (scores.length === 0) {
+      if (!requested) {
         const response = await fetch(`${apiUrl}/scores`);
         const data = await response.json();
 
