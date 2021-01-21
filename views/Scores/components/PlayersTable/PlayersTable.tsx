@@ -14,6 +14,7 @@ const PlayersTable = () => {
   }, []);
 
   if (error) return <p>Algo salio mal, intentalo mas tarde</p>;
+
   return (
     <section className={styles.root}>
       <Container>
