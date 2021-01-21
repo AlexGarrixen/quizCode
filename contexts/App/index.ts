@@ -1,7 +1,12 @@
-import { type } from 'os';
 import Context from './Context';
 import Provider from './Provider';
-import { useQuestions, useCategories, usePlayer, useCategory } from './hooks';
+import {
+  useQuestions,
+  useCategories,
+  usePlayer,
+  useCategory,
+  useScores,
+} from './hooks';
 
 export {
   Provider,
@@ -10,4 +15,5 @@ export {
   usePlayer,
   useQuestions,
   useCategory,
+  useScores,
 };

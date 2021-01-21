@@ -13,6 +13,7 @@ const AppProvider: FC<AppProviderProps> = ({ children }) => {
   const [questions, setQuestions] = React.useState<Record<string, Question>>(
     {}
   );
+  const [scores, setScores] = React.useState([]);
 
   const contextValue = React.useMemo(
     () => ({
@@ -21,8 +22,10 @@ const AppProvider: FC<AppProviderProps> = ({ children }) => {
       player,
       questions,
       setQuestions,
+      scores,
+      setScores,
     }),
-    [categories, player, questions]
+    [categories, player, questions, scores]
   );
 
   return (
