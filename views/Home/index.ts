@@ -1,4 +1,4 @@
 export * from './components/Context';
 export * from './components/Provider';
 export * from './components/Categories';
-export * from './components/FormUserInput';
+export * from './components/RegistrationUserDialog';
