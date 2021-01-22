@@ -1,38 +1,38 @@
-import { Category } from '../interfaces';
+import { Category } from '@interfaces';
 
 export const categories: Category[] = [
   {
-    id: '1',
+    _id: '1',
     name: 'Javascript',
     topics: ['Data types', 'Fundamentals'],
-    bgColor: {
+    bgGradient: {
       from: '#5581f1',
       to: '#1153fc',
     },
   },
   {
-    id: '2',
+    _id: '2',
     name: 'Css',
     topics: ['Reglas', 'Selectores'],
-    bgColor: {
+    bgGradient: {
       from: '#c165dd',
       to: '#5c27fe',
     },
   },
   {
-    id: '3',
+    _id: '3',
     name: 'Html',
     topics: ['Estructura', 'Etiquetas'],
-    bgColor: {
+    bgGradient: {
       from: '#ffcb52',
       to: '#ff7802',
     },
   },
   {
-    id: '4',
+    _id: '4',
     name: 'React js',
     topics: ['Reactividad', 'State'],
-    bgColor: {
+    bgGradient: {
       from: '#facd68',
       to: '#fc76b3',
     },
