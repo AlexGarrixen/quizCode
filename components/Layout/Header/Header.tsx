@@ -15,7 +15,7 @@ const Header: FC = () => (
               <LinkItem path='/' text='Inicio' />
             </li>
             <li>
-              <LinkItem path='/clasifications' text='Clasificaciones' />
+              <LinkItem path='/scores' text='Clasificaciones' />
             </li>
           </ul>
         </nav>
