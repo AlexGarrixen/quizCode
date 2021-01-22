@@ -1,12 +1,14 @@
 import * as React from 'react';
-import { Categories, FormUserInput, Provider } from '@view-components/Home';
+import {
+  Categories,
+  RegistrationUserDialog,
+  Provider,
+} from '@view-components/Home';
 
 const Home = () => (
   <Provider>
-    <div>
-      <Categories />
-      <FormUserInput />
-    </div>
+    <Categories />
+    <RegistrationUserDialog />
   </Provider>
 );
 

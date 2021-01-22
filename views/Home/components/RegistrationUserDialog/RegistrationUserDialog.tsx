@@ -3,9 +3,9 @@ import { Dialog, Button, Input } from '@ui-components';
 import { FC } from '@types';
 import { useFormVisibility } from '../../hooks';
 import { useFormInput } from './hook';
-import styles from './FormUserInput.module.css';
+import styles from './RegistrationUserDialog.module.css';
 
-const FormUserInput: FC = () => {
+const RegistrationUserDialog: FC = () => {
   const { visibleDialog, setVisibilityDialog } = useFormVisibility();
   const { value, error, handleOnChange, handleOnSubmit } = useFormInput();
 
@@ -37,4 +37,4 @@ const FormUserInput: FC = () => {
   );
 };
 
-export default FormUserInput;
+export default RegistrationUserDialog;
