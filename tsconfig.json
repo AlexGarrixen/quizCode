@@ -18,7 +18,7 @@
       "@ui-components": ["components/index.ts"],
       "@view-components/*": ["views/*"],
       "@icons": ["components/Icons/index.ts"],
-      "@mocks": ["shared/mocks/index.ts"],
+      "@mocks": ["__mocks__/index.ts"],
       "@hooks": ["hooks/index.ts"],
       "@interfaces": ["shared/interfaces/index.ts"],
       "@types": ["shared/types/index.ts"],
