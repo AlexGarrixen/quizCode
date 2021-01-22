@@ -1,4 +1,5 @@
 import * as React from 'react';
+import shuffle from 'lodash.shuffle';
 import AppContext from '../Context';
 import { ContextValue } from '../types';
 import { apiUrl } from '@constants';
@@ -34,7 +35,7 @@ const useQuestions = (categoryId: string) => {
   };
 
   return {
-    questions: questions[categoryId] || [],
+    questions: shuffle(questions[categoryId]) || [],
     requesting,
     error,
     requestQuestions,
