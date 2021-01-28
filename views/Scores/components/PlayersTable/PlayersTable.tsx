@@ -1,13 +1,15 @@
 import * as React from 'react';
 import { useRouter } from 'next/router';
 import { PlayerItem } from './PlayerItem';
-import { Container, Loading } from '@ui-components';
+import { Container, Loading, Tabs, Tab } from '@ui-components';
 import { useScores } from '@contexts/App';
+import { useFilter } from './hook';
 import styles from './PlayersTable.module.css';
 
 const PlayersTable = () => {
   const { scores, requesting, error, requestScores } = useScores();
   const { query } = useRouter();
+  const { value, filteredData, handleChangeTab } = useFilter('All', scores);
 
   React.useEffect(() => {
     requestScores();
@@ -22,13 +24,25 @@ const PlayersTable = () => {
         {requesting ? (
           <Loading />
         ) : (
-          <ul className={styles.contentBox}>
-            {scores.map((player) => (
-              <li key={player._id}>
-                <PlayerItem {...player} queryParams={query} />
-              </li>
-            ))}
-          </ul>
+          <>
+            <Tabs
+              value={value}
+              onChangeTab={handleChangeTab}
+              className={styles.filterTabs}
+            >
+              <Tab value='All'>Todos</Tab>
+              <Tab value='Html'>Html</Tab>
+              <Tab value='Css'>Css</Tab>
+              <Tab value='Javascript'>Js</Tab>
+            </Tabs>
+            <ul className={styles.contentBox}>
+              {filteredData.map((player) => (
+                <li key={player._id}>
+                  <PlayerItem {...player} queryParams={query} />
+                </li>
+              ))}
+            </ul>
+          </>
         )}
       </Container>
     </section>

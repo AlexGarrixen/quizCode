@@ -1,13 +1,6 @@
-import { Category, Question } from '@interfaces';
+import { Category, Question, Score } from '@interfaces';
 
 export type Categories = Record<string, Category>;
-
-interface Score {
-  _id: string;
-  player: string;
-  score: number;
-  category: string;
-}
 
 export interface ContextValue {
   categories: Categories;
