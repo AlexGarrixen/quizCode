@@ -1,0 +1,19 @@
+.root {
+  display: flex;
+}
+
+.tab {
+  padding: 6px 8px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+
+.tab:hover {
+  box-shadow: 0 2px 0 0 #fff;
+}
+
+.activeTab {
+  box-shadow: 0 2px 0 0 #fff;
+}
